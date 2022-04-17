@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <title>Output</title>
+</head>
+<body>
+    <h2 id="output">Nothing</h2>
+    <br><br>
+    <button onclick="get()">Update</button>
+    <br><br>
+    <button onclick="reset()">Reset</button>
+
+    <br><br><br><br><br><br><br><br><br>
+    <a href="index.php">Back</a>
+</body>
+</html>
+
+<script>
+
+    function get(){
+        $.post("ajax/storeAndGet.php", {
+                action: "get"
+            }, function (data) {
+                $("#output").html(data);
+            }
+        )
+    }
+
+    function reset(){
+        $.post("ajax/storeAndGet.php", {
+            action: "reset"
+        }, function (data){
+            $("#output").html(data);
+        })
+    }
+
+    window.setInterval(function(){
+        get();
+    }, 500);
+
+
+</script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <title>Cylaborate</title>
+</head>
+<body>
+<div id="content">
+    <div id="left-bar">
+        <div id="left-container">
+
+            <div id="company-name">Iowa State</div>
+
+            <div id="file-directory">
+                <b>Cylaborate</b><br>
+                |---public<br>
+                |&nbsp&nbsp&nbsp|---css<br>
+                |&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp|---index.css<br>
+                |&nbsp&nbsp&nbsp|---index.html<br>
+            </div>
+
+            <div id="chat">
+                Robert: This is chat
+            </div>
+            <input type="text" id="message"><button>Send</button>
+        </div>
+    </div>
+
+    <div id="divider"></div>
+    <button onclick="load_overview()">load</button>
+    <button onclick="load_editor()">loadeditor</button>
+    <button onclick="table_create()">Create Tables</button>
+    <div id="right-bar"></div>
+
+</div>
+</body>
+</html>
+<script>
+    /*TODO
+    Get title
+    get company name
+    get file directory
+    get chat
+    send message
+    get project title
+    get url
+    get project stats
+    get project name
+
+    load main window
+     */
+
+    $filename = "test.html";
+    function load_overview(){
+        $.post("content_loader.php", {
+            content : "OVERVIEW"
+        }, function (data) {
+            $("#right-bar").html(data);
+        })
+    }
+
+    function load_editor() {
+        $.post("content_loader.php", {
+            content: "EDITOR"
+        }, function (data) {
+            $("#right-bar").html(data);
+        })
+    }
+
+    function table_create() {
+        $.post("../private/database/create_tables.php", {
+            content : "CREATE"
+        })
+    }
+</script>
+

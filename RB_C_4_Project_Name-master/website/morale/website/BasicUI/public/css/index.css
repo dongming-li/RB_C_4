@@ -1,0 +1,87 @@
+#content{
+    height:98vh;
+}
+
+#left-bar{
+    float: left;
+    width: 30vw;
+    padding-top: 20px;
+}
+
+#left-container{
+    width: 80%;
+    margin: auto;
+}
+
+#company-name{
+    height: 20%;
+    border: 3px solid red;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Chalkboard;
+}
+
+#file-directory{
+    margin-top: 30%;
+    height: 10vh;
+    border: 3px solid red;
+    padding:10px;
+    overflow-y: scroll;
+}
+
+#chat{
+    border: 3px solid red;
+    margin-top: 30%;
+    height: 50vh;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+
+#divider{
+    height: 100%;
+    width: 0;
+    border: 1px solid black;
+    float: left;
+}
+
+#right-bar{
+    width: 68vw;
+    float: right;
+}
+
+#top-bar{
+    height:25vh;
+    border: 3px solid blue;
+}
+
+#project-information{
+    float: left;
+    margin-left: 5vw;
+    border: 1px solid red;
+    width: 20vw;
+    text-align: center;
+    height: 100%;
+}
+
+#project-stats{
+    float: left;
+    font-size: smaller;
+    margin-left: 2.5vw;
+}
+
+#project-name{
+    float: left;
+    margin-left: 5vw;
+    margin-top: 6vh;
+    padding: 5vh;
+    background: gray;
+}
+#main-content{
+    height: 65vh;
+    width: 65vw;
+    border: 3px solid blue;
+    margin-top: 5vh;
+}

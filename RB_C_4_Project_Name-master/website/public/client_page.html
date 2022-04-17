@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+
+<body>
+
+
+<div id="client_page">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./javascript/client_overview.js"></script>
+    <div id="client_info">
+        <p id="client_name">Some Company Name</p>
+        <p id="project_info">Client's Project</p>
+        <p id="project_manager">Manager of Project</p>
+    </div>
+    <div id="client_support">
+
+        <label for="rating_select">Rate our Product:</label>
+        <select id="rating_select">
+            <option selected>Select:</option>
+            <option>Awful</option>
+            <option>Poor</option>
+            <option>Average</option>
+            <option>Good</option>
+            <option>Amazing</option>
+        </select>
+        <br>
+        <textarea id="review_input" rows="5" cols="100">
+        </textarea>
+        <br>
+        <button type="submit" id="submit_review">Submit</button>
+    </div>
+    <div id="thanks">
+        <h2>
+            Thanks for submitting your review!
+        </h2>
+    </div>
+</div>
+
+</body>

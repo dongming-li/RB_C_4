@@ -1,0 +1,36 @@
+<link type="text/css" rel="stylesheet" href="css/index.css"/>
+<div id="login">
+    <div id="login_error"></div>
+    <table>
+        <tr><th>Username:</th><th><input id="username" type="text"></th><th id="username-error" class="error-text"></th></tr>
+        <tr><th>Password:</th><th><input id="password" type="password"></th><th id="password-error" class="error-text"></th></tr>
+        <tr class="needed-to-register"><th>Email address:</th><th><input id="email" type="text"></th><th id="email-error" class="error-text"></th></tr>
+        <tr class="needed-to-register"><th>First name:</th><th><input id="first_name" type="text"></th><th id="first-error" class="error-text"></th></tr>
+        <tr class="needed-to-register"><th>Last name:</th><th><input id="last_name" type="text"></th><th id="last-error" class="error-text"></th></tr>
+        <tr class="needed-to-register"><th>Account type:</th><th>
+        <select id="account_type">
+            <option value="none"></option>
+            <option value="developer">Developer</option>
+            <option value="manager">Manager</option>
+            <option value="client">Client</option>
+        </select>
+        </th><th id="type-error" class="error-text"></th></tr>
+    </table>
+
+    <br>
+    Login: <input type="radio" name="login-register" value="login" id="radio_login" class="radio" checked>&nbsp&nbsp&nbsp
+    Register: <input type="radio" name="login-register" value="register" id="radio_register" class="radio"><br>
+    <button id="login_button">Submit</button>
+</div>
+
+<script>
+    $("#radio_login").click(function() {
+        $(".needed-to-register").hide();
+    });
+
+    $("#radio_register").click(function () {
+        $(".needed-to-register").show();
+    });
+
+    $(document).ready($(".needed-to-register").hide());
+</script>

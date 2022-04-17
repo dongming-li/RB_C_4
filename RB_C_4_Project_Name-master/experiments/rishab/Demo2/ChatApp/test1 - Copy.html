@@ -1,0 +1,17 @@
+
+<html>
+<head>
+<script language="javascript">
+var conn = new WebSocket('ws://localhost:80');
+conn.onopen = function(e) {
+    console.log("Connection established!");
+};
+
+conn.onmessage = function(e) {
+    console.log(e.data);
+};
+</script>
+</head>
+<body>
+</body>
+</html>

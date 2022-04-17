@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <title>Input 2</title>
+</head>
+<body>
+    <input id="input" autocomplete="off">
+    <h2 id="error"></h2>
+    <br><br>
+
+    <button onclick="reset()">Reset</button>
+
+    <br><br><br><br><br><br><br><br><br>
+    <a href="index.php">Back</a>
+</body>
+</html>
+
+<script>
+
+//    $(document).keypress(function(event){
+//        alert(String.fromCharCode(event.which))
+//    });
+
+    function get(){
+        $.post("ajax/storeAndGet.php", {
+                action: "get"
+            }, function (data) {
+                $("#input").html(data);
+            }
+        )
+    }
+
+    function reset(){
+        $.post("ajax/storeAndGet.php", {
+            action: "reset"
+        }, function (data){
+            $("#input").html("");
+        })
+    }
+
+    $("#input").keyup(function(event){
+        //$value = String.fromCharCode(event.which);
+        $value = $("#input").val();
+        //alert($value);
+        $.post("ajax/storeAndGet.php", {
+            action: "store",
+            value: $value
+        }, function (data) {
+            //alert(data);
+            $("#error").html(data);
+            }
+        )
+    });
+
+// Removed in favor of storing entire word
+//    $("#input").keydown(function(event){
+//        $value = event.key;
+//
+//
+//
+//        if($value == "Backspace") {
+//            $.post("ajax/storeAndGet.php", {
+//                    action: "backspace"
+//                }, function (data) {
+//
+//                }
+//            )
+//        }
+//    })
+
+
+</script>

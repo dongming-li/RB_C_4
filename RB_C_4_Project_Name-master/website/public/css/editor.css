@@ -1,0 +1,15 @@
+textarea.chunk {
+    height: auto;
+    overflow: hidden;
+    resize: none;
+    min-height: 50px;
+    width: 100%;
+}
+
+textarea.chunk:read-only {
+    background: gray;
+}
+
+button.chunk-adder {
+    height: 25px;
+}

@@ -1,0 +1,169 @@
+#body {
+    padding: 0;
+    margin: 0;
+}
+
+#header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 20vh;
+    width: 100vw;
+    background-color: #3e3d3d;
+    color: orange;
+}
+
+#top-bar {
+    height: 19vh;
+    position: fixed;
+    margin-left: 27vw;
+    border: 3px solid blue;;
+    overflow: hidden;
+}
+
+#content{
+    margin-top: 10vh;
+    margin-left: 30vw;
+    background-color: #3e3d3d;
+}
+
+#left-bar{
+    float: left;
+    width: 27vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #3e3d3d;
+}
+
+#left-container{
+    width: 80%;
+    position: relative;
+    margin: auto;
+}
+
+#right-bar{
+    margin-top: 10vh;
+    width: 70vw;
+    float: right;
+    overflow: hidden;
+}
+
+#company-name{
+    height: 20%;
+    border: 3px inset #343333;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Chalkboard;
+    color: orange;
+}
+
+#file-directory{
+    margin-top: 30%;
+    height: 10vh;
+    border: 3px inset #343333;
+    padding:10px;
+    overflow-y: scroll;
+    color: orange;
+}
+
+#chat {
+    position: relative;
+    margin-top: 30%;
+    height: 50vh;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+div.chatwindow textarea {
+    width: 100%;
+    height: 75%;
+    resize: none;
+    position: absolute;
+    overflow: hidden;
+    padding: 10px 10px;
+    display: block;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 10px black;
+    color: orange;
+    background-color: gray;
+}
+
+div.chatwindow #sidebar-entrywindow {
+    height: 25%;
+    bottom: 0;
+    position: absolute;
+}
+
+
+#divider{
+    height: 100vh;
+    width: 0;
+    border: 1px solid black;
+    float: left;
+}
+
+#project-information{
+    float: left;
+    margin-left: 5vw;
+    border: 1px inset #343333;
+    width: 20vw;
+    text-align: center;
+    height: 100%;
+}
+
+#project-stats{
+    float: left;
+    font-size: smaller;
+    margin-left: 2.5vw;
+}
+
+#project-name{
+    float: left;
+    margin-left: 5vw;
+    margin-top: 4vh;
+    padding: 5vh;
+    background: gray;
+}
+#main-content{
+    height: 65vh;
+    width: 65vw;
+    margin-top: 5vh;
+}
+
+p.files{
+    margin:0;
+}
+
+#login{
+    border:1px solid black;
+    margin-top: 10vh;
+}
+
+#login_space{
+    position: relative;
+
+}
+
+.error-text{
+    color: firebrick;
+}
+
+#log{
+    height: 50vh;
+    width: 40vh;
+}
+
+#overview_window{
+    color: aliceblue;
+}
+
+p.user_numbers{
+    margin: 0;
+    padding: 0;
+}
